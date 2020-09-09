@@ -21,8 +21,7 @@
   <%if flash[:alert]%>
     <div class="notification is-danger global-notification"><%= notice %>
        <p class="notice has-text-white"><%= alert %></p>
-    </div>
-      
+    </div>     
   <%end%>
 
     <nav class="navbar is-success">
@@ -34,7 +33,7 @@
 
       <div class="navbar-end">
         <div class="field is-grouped level"> 
-        <%= if user_signed_in? %>     
+        <%= post.user.name if user_signed_in? %>     
           <p class="control">
             <%= link_to "Logout", destroy_user_session_path, method: :delete, class:"navbar-item has-text-dark"%>
           </p>
