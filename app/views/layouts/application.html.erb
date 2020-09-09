@@ -10,7 +10,11 @@
   </head>
 
   <body>
+  <% if user_signed_in? %>
    <%= link_to "Logout", destroy_user_session_path, method: :delete ,class:"button is-info"%>
+   <% else %>
+  <%= link_to "Login", new_user_session_path, class:"button is-info"%>
+   <%end %>
     <%= yield %>
   </body>
 </html>
