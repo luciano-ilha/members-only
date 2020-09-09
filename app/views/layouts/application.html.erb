@@ -6,22 +6,31 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <nav >
-      <div class="navbar navbar-brand is-info level">      
-          <p class="control title is-5 ">
-            <%= link_to "MemebersOnly", root_path, class:"has-text-white is-info"%>
-          </p>
-      
-        <div class="navbar-end">
-          <p class="control">
-            <%= link_to "Sign Up", new_user_registration_path, class:"button has-text-info is-inverted"%>
-          </p>
-        </div>
+    <nav class="navbar is-success">
+      <div class="navbar-brand">   
+        <%= link_to root_path, class:"navbar-item" do %>
+        <h1 class="title is-4 has-text-white"> MembersOnly</h1>
+        <% end %>
       </div>
+
+      <div class="navbar-end">
+        <div class="field is-grouped level">    
+          <p class="control">
+            <%= link_to "Sign Up", new_user_registration_path, class:"navbar-item has-text-white"%>
+          </p>
+          <p class="control">
+            <%= link_to "Name", edit_user_registration_path, class:"button has-text-success is-inverted"%>
+          </p>
+          <p class="control">
+            <%= link_to "Sign Up", new_user_session_path, class:" navbar-item has-text-white"%>
+          </p>
+        </div> 
+      </div>    
     </nav>
     <%= app_user_check(@posts, @user, @current_user)%>
     <%= yield %>
