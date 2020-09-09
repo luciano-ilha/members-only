@@ -14,4 +14,11 @@ module PostsHelper
       link_to 'Edit',edit_post_path(post) 
     end
   end
+
+  def delete_btn(post)
+    if user_signed_in?
+      link_to 'Delete',post, method: :delete, data: {confirm: "Are you sure you want to delete this post?"}
+    end
+   
+  end
 end
