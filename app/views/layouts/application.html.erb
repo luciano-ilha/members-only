@@ -10,6 +10,19 @@
   </head>
 
   <body>
+    <nav >
+      <div class="navbar navbar-brand is-info level">      
+          <p class="control title is-5 ">
+            <%= link_to "MemebersOnly", root_path, class:"has-text-white is-info"%>
+          </p>
+      
+        <div class="navbar-end">
+          <p class="control">
+            <%= link_to "Sign Up", new_user_registration_path, class:"button has-text-info is-inverted"%>
+          </p>
+        </div>
+      </div>
+    </nav>
     <%= app_user_check(@posts, @user, @current_user)%>
     <%= yield %>
   </body>
