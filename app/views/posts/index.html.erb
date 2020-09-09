@@ -5,12 +5,13 @@
  
     <% @posts.each do |post| %>
       <ul>
-        <li> <%= user_check(post, @user) %></li>
-        <li><%= post.title %></li>
-        <li><%= post.body %></li>
+        <li> <h2><%= user_check(post, @user) %> <h2></li>
+        <li><div><%= post.title %></div></li>
+        <li><div><%= post.body %></div></li>
       </ul>
+      <%=edit_btn(post)%>                        
     <% end %>
 
 <br>
+    <%= new_post_btn%> 
 
-<%= new_post_btn%>
