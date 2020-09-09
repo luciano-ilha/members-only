@@ -8,7 +8,7 @@ In this project, we build an exclusive clubhouse where our members can write emb
 - Ruby on Rails
 
 ## 🔨 Setup    <a name = "setup"></a>
-- Clone the project from github using
+- Clone this project from github using
 - <code>$ git clone https://github.com/CarbonellIlha/members-only.git</code>
 - <code>cd members-only</code>
 - <code>$ bundle install</code>
