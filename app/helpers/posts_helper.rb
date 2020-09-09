@@ -12,6 +12,7 @@ module PostsHelper
   end
 
   def delete_btn(post)
-    return link_to 'Delete', post, method: :delete, data: {confirm: 'Are you sure you want to delete this post?'} if user_signed_in?
+    return link_to 'Delete', post, method: :delete,
+     data: { confirm: 'Are you sure you want to delete this post?'} if user_signed_in?
   end
 end
