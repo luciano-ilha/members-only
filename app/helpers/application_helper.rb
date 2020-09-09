@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 module ApplicationHelper
   def app_user_check(_post, _user, current_user)
     if user_signed_in?
