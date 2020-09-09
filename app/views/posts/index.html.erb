@@ -2,27 +2,15 @@
 
 <h1>Posts</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>User</th>
-      <th>Title</th>
-      <th>Body</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+ 
     <% @posts.each do |post| %>
-      <tr>
-        <td> <%= user_check(post, @user) %></td>
-        <td><%= post.title %></td>
-        <td><%= post.body %></td>
-      </tr>
+      <ul>
+        <li> <%= user_check(post, @user) %></li>
+        <li><%= post.title %></li>
+        <li><%= post.body %></li>
+      </ul>
     <% end %>
-  </tbody>
-</table>
 
 <br>
 
-<%= link_to 'New Post', new_post_path %>
+<%= new_post_btn%>
