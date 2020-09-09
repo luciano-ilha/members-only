@@ -33,11 +33,11 @@
 
       <div class="navbar-end">
         <div class="field is-grouped level"> 
-        <%= post.user.name if user_signed_in? %>     
+           
           <p class="control">
             <%= link_to "Logout", destroy_user_session_path, method: :delete, class:"navbar-item has-text-dark"%>
           </p>
-        <% end %>
+    
           <p class="control">
             <%= link_to "Name", edit_user_registration_path, class:"button has-text-success is-inverted"%>
           </p>
