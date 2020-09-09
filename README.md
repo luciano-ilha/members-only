@@ -9,8 +9,8 @@ In this project, we build an exclusive clubhouse where our members can write emb
 
 ## 🔨 Setup    <a name = "setup"></a>
 - Clone the project from github using
-- <code>$ git clone https://github.com/CarbonellIlha/memebers-only.git</code>
-- <code>cd memebers-only</code>
+- <code>$ git clone https://github.com/CarbonellIlha/members-only.git</code>
+- <code>cd members-only</code>
 - <code>$ bundle install</code>
 
 ## Run Test <a name = "Testing"></a>
