@@ -1,7 +1,7 @@
- # Re-former
+ # Members-only
 
 ## About <a name = "About"></a>
-This project puts our knowledge of Forms  to the test. We built an application similar to hoe forms work in the real world where a user can create a post and add comments to it.
+In this project, we build an exclusive clubhouse where our members can write embarrassing posts about non-members. Inside the clubhouse, members can see who the author of a post is but, outside, they can only see the story and wonder who wrote it.
 
 ## 🔧 Built with<a name = "with"></a>
 
@@ -9,8 +9,8 @@ This project puts our knowledge of Forms  to the test. We built an application s
 
 ## 🔨 Setup    <a name = "setup"></a>
 - Clone the project from github using
-- <code>$ git clone https://github.com/haroonabdulrazaq/re-former.git</code>
-- <code>cd re-former</code>
+- <code>$ git clone https://github.com/CarbonellIlha/memebers-only.git</code>
+- <code>cd memebers-only</code>
 - <code>$ bundle install</code>
 
 ## Run Test <a name = "Testing"></a>
