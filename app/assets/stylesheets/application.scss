@@ -28,3 +28,8 @@ img{
 .notification:not(:last-child){
     margin-bottom: 0;
 }
+
+ul,
+li {
+  list-style: none;
+}

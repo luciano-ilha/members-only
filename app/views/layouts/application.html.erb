@@ -48,7 +48,8 @@
       </div>    
     </nav>
 
-    <%= app_user_check(@posts, @user, @current_user)%>
+   <%=link_to 'All Post', root_path %> <%= app_user_check %> <%= status_check %>
     <%= yield %>
   </body>
 </html>
+  
