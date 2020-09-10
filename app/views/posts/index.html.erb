@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Posts</h1>
+
+ 
+    <% @posts.each do |post| %>
+      <ul>
+        <li> <h2><%= user_check(post, @user) %> <h2></li>
+        <li><div><%= post.title %></div></li>
+        <li><div><%= post.body %></div></li>
+      </ul>                   
+    <% end %>
+
+<br>
+    <%= new_post_btn%> 
+
