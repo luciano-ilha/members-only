@@ -3,7 +3,7 @@ module ApplicationHelper
     if user_signed_in?
       link_to 'Logout', destroy_user_session_path, method: :delete, class: 'navbar-item has-text-dark'
     else
-      link_to 'Login', new_user_session_path, class:'navbar-item has-text-dark'
+      link_to 'Login', new_user_session_path, class: 'navbar-item has-text-dark'
     end
   end
 
