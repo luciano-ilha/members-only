@@ -35,20 +35,18 @@
         <div class="field is-grouped level"> 
            
           <p class="control">
-            <%= link_to "Logout", destroy_user_session_path, method: :delete, class:"navbar-item has-text-dark"%>
+            <%= app_user_check %> 
           </p>
-    
-          <p class="control">
-            <%= link_to "Name", edit_user_registration_path, class:"button has-text-success is-inverted"%>
+
+          <p class="control ">
+              <%= current_user.name  if user_signed_in?%>
           </p>
           <p class="control">
-            <%= link_to "Sign Up", new_user_session_path, class:" navbar-item has-text-dark"%>
+            <%= status_check %>
           </p>
         </div> 
       </div>    
-    </nav>
-
-   <%=link_to 'All Post', root_path %> <%= app_user_check %> <%= status_check %>
+    </nav> 
     <%= yield %>
   </body>
 </html>

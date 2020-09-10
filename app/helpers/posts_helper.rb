@@ -1,5 +1,5 @@
 module PostsHelper
-  def user_check(post, _user)
+  def user_check(post, user)
     post.user.name if user_signed_in?
   end
 
