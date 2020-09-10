@@ -8,6 +8,6 @@ module ApplicationHelper
   end
 
   def status_check
-    return link_to "Sign Up", new_user_session_path, class:"navbar-item has-text-dark" unless user_signed_in?
+    return link_to "Sign Up", new_user_registration_path, class:"navbar-item has-text-dark" unless user_signed_in?
   end
 end
