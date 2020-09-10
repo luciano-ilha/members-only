@@ -6,11 +6,48 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-   <%=link_to 'All Post', root_path %> <%= app_user_check %> <%= status_check %>
+
+  <%if flash[:notice]%>
+    <div class="notification is-primary global-notification">
+      <p class="notice has-text-white"><%= notice %></p>
+    </div>
+  <%end%>
+
+  <%if flash[:alert]%>
+    <div class="notification is-danger global-notification"><%= notice %>
+       <p class="notice has-text-white"><%= alert %></p>
+    </div>     
+  <%end%>
+
+    <nav class="navbar is-success">
+      <div class="navbar-brand"> 
+        <%= link_to root_path, class:"navbar-item" do %>
+        <h1 class="title is-4 has-text-white"> MembersOnly</h1>
+        <% end %>
+      </div>
+
+      <div class="navbar-end">
+        <div class="field is-grouped level"> 
+           
+          <p class="control">
+            <%= app_user_check %> 
+          </p>
+
+          <p class="control ">
+              <%= current_user.name  if user_signed_in?%>
+          </p>
+          <p class="control">
+            <%= status_check %>
+          </p>
+        </div> 
+      </div>    
+    </nav> 
     <%= yield %>
   </body>
 </html>
+  

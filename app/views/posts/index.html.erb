@@ -1,16 +1,29 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Posts</h1>
-
+<h1 class="panel is-12 has-text-centered panel-heading">All Posts</h1>
  
     <% @posts.each do |post| %>
-      <ul>
-        <li> <h2><%= user_check(post, @user) %> <h2></li>
-        <li><div><%= post.title %></div></li>
-        <li><div><%= post.body %></div></li>
-      </ul>                   
+      <div class="columns is-centered">
+        <div class="column is-half">
+          <div class= "box">
+            <strong><%= user_check(post, @user) %></strong>
+            <div class="has-text-centered">
+               <em ><%= post.title %></em>
+               <div><%= post.body %></div> 
+            </div>
+          </div> 
+        </div>   
+      </div>               
     <% end %>
 
 <br>
-    <%= new_post_btn%> 
+<nav class="navbar is-fixed-bottom is-centered">
+	<div class="navbar-menu">
+		<div class="navbar-item">
+			<div class="field is-grouped">
+				<p class="control">
+					 <%= new_post_btn%> 
+				</p>
+		</div>
+	</div>
+</nav>
+   
 
